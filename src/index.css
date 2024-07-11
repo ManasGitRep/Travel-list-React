@@ -16,6 +16,10 @@ const initialItems = [
 html {
   font-size: 62.5%;
 }
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
 
 body {
   font-size: 2.4rem;
