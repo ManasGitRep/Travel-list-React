@@ -29,13 +29,13 @@ export default function App() {
         onDeleteItem={handleDeleteItems}
         onToggleItem={handleToggleItems}
       />
-      <Stats />
+      <Stats items={items} />
     </div>
   );
 }
 
 function Logo() {
-  return <h1>🌴 Far Away 🛍️</h1>;
+  return <h1>🌴Far Away🛍️</h1>;
 }
 function Form({ onAddItems }) {
   const [description, setDescription] = useState("");
@@ -111,10 +111,25 @@ function Item({ item, onDeleteItem, onToggleItem }) {
   );
 }
 
-function Stats() {
+function Stats({ items }) {
+  if (items.length === 0) {
+    return (
+      <footer className="stats">
+        <em>Start adding items in your list</em>{" "}
+      </footer>
+    );
+  }
+  const numItems = items.length;
+  const packedItems = items.filter((items) => items.packed).length;
+  const percentage = Math.round((packedItems / numItems) * 100);
   return (
     <footer className="stats">
-      <em>👜 You have X items on your list, and you already packed X(X%)</em>
+      <em>
+        {percentage === 100
+          ? "Your got everything! Ready to go✈️"
+          : `👜 You have ${numItems} items on your list, and you already packed
+        ${packedItems}(${percentage}%)`}
+      </em>
     </footer>
   );
 }
