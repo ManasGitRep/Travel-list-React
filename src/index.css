@@ -141,3 +141,98 @@ input[type="checkbox"] {
   font-weight: 700;
   padding: 3.2rem 0;
 }
+
+/* Media Queries for Tablet and Mobile */
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 6rem;
+    word-spacing: 20px;
+    letter-spacing: -3px;
+  }
+
+  .add-form {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .add-form h3 {
+    margin-right: 0;
+    font-size: 2rem;
+  }
+
+  .list ul {
+    width: 90%;
+  }
+
+  .list li {
+    font-size: 1.6rem;
+  }
+
+  .stats {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+    word-spacing: 15px;
+    letter-spacing: -2px;
+    padding: 2rem 0;
+  }
+
+  .add-form {
+    padding: 2rem 0;
+  }
+
+  .list {
+    padding: 2.4rem 0;
+  }
+
+  .list ul {
+    width: 100%;
+  }
+
+  .list li button {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 4rem;
+    word-spacing: 10px;
+    letter-spacing: -1px;
+    padding: 1.6rem 0;
+  }
+
+  .add-form {
+    padding: 1.6rem 0;
+  }
+
+  .add-form h3 {
+    font-size: 1.8rem;
+  }
+
+  button,
+  select,
+  input {
+    padding: 1rem 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  .list {
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+
+  .list li {
+    font-size: 1.4rem;
+  }
+
+  .stats {
+    padding: 2rem 0;
+    font-size: 1.8rem;
+  }
+}
